@@ -22,7 +22,7 @@ def bootstrap_admin() -> None:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://webpuntoscriticos-frontend.onrender.com",  # URL pública de tu frontend
+        "https://webpuntoscriticos.onrender.com",  # URL pública de tu frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
