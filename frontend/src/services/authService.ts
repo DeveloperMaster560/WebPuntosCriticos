@@ -1,6 +1,8 @@
 import type { AuthResponse, User, UserRole } from '../models/auth'
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000/api'
+// 🔹 Usa la variable de entorno VITE_API_URL definida en Render.
+// Si no existe, por defecto apunta a localhost (solo útil en desarrollo).
+const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
 
 async function request<T>(path: string, options: RequestInit): Promise<T> {
   const response = await fetch(`${API_URL}${path}`, {
